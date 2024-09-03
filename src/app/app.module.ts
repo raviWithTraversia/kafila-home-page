@@ -8,13 +8,15 @@ import { HeaderComponent } from './header/header.component';
 import {MatButtonModule} from '@angular/material/button';
 import { BannerGroupComponent } from './banner-group/banner-group.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { AuthModalComponent } from './auth-modal/auth-modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     BannerGroupComponent,
-    NavMenuComponent
+    NavMenuComponent,
+    AuthModalComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+<app-auth-modal *ngIf="showAuthModal" (closeEvent)="toggleAuthModal()"></app-auth-modal>
 <header class="header d-flex justify-content-between align-items-center">
 <img src="../../assets/kafila_logo.png" alt="kafila_logo" class="logo">
 <div class="d-lg-none menu-container">
@@ -13,7 +14,7 @@
         <li>CASE STUDIES</li>
     </nav>
    <div class="d-flex gap-3 button-container">
-    <button class="menu-button main">SIGN IN/SIGN UP</button>
+    <button class="menu-button main" (click)="toggleAuthModal()">SIGN IN/SIGN UP</button>
     <button class="menu-button secondary">REQUEST DEMO</button>
    </div>
    </div>

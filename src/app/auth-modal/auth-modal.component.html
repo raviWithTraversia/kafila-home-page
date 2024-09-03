@@ -1,0 +1,38 @@
+<div class="overlay centered">
+    <div class="auth-modal">
+        <div class="content d-lg-block">
+            <button class="close-btn" (click)="triggerCloseEvent()">
+                <img src="../../assets/icons/close-accent.png" alt="close" />
+            </button>
+        </div>
+        <form action="" class="form">
+            <button class="close-btn d-lg-none" (click)="triggerCloseEvent()">
+                <img src="../../assets/icons/close-accent.png" alt="close" />
+            </button>
+            <img class="logo" src="../../assets/kafila_logo.png" alt="">
+            <div class="d-flex flex-column gap-3 w-100">
+                <div class="input-control">
+                    <div class="input-icon">
+                        <img src="../../assets/icons/user.png" alt="">
+                    </div>
+                <input type="email" name="" id="email">
+                </div>
+                <div class="input-control">
+                    <div class="input-icon">
+                        <img src="../../assets/icons/lock.png" alt="">
+                    </div>
+                <input [type]="showPassword ? 'text' : 'password'" name="" id="password">
+               <button class="show-hide-btn"  (click)="toggleShowPassword()" type="button">
+                <img  [src]="showPassword ?   '../../assets/icons/hidden.png': '../../assets/icons/view.png'" alt="toggle-password-visibility">
+               </button>
+                </div>
+            </div>
+            <button class="sign-in-btn mt-4">
+                <span>SIGN IN</span>
+                <img src="../../assets/icons/flight.png" alt="">
+            </button>
+            <a class="register-link">Haven't Registered Yet? <span>Register Here</span></a>
+        </form>
+       
+    </div>
+</div>
