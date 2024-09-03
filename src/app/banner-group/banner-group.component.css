@@ -1,0 +1,111 @@
+.banner-group{
+    background-image: url("../../assets/home-page-banner.webp");
+    min-height: 90vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content{
+    padding: 50px 30px;
+    color: white;
+}
+
+.pill{
+    height: 10px;
+    width: 30px;
+    border-radius: 999999px;
+    margin-right: 10px;
+    background-color: #343b53;
+    transition: width .35s ease-in-out;
+}
+
+.pill.selected{
+    width: 50px;
+    background-image: linear-gradient(to right, #084886 0%, #063461 100%);
+    /* animation: scale .5s ease-in-out forwards; */
+}
+
+h1{
+    color: #084886;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+h2{
+    font-size: 32px;
+    width: 100%;
+    max-width: 700px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.subtitle{
+    width: 50%;
+    max-width: 600px;
+    font-size: 24px;
+}
+
+.main-btn{
+    margin-top: 20px;
+    background-image: linear-gradient(to right, #063461 0%, #084886 100%);
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 16px 36px;
+    border-radius: 5px;
+}
+
+.banner-details{
+transition: opacity 0.3s ease;
+display: flex;
+justify-content: space-between;
+}
+.banner-details.animate{
+    opacity: 0;
+}
+.video-player{
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    height: fit-content;
+    width: fit-content;
+}
+
+.video-banner{
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.video-player:hover .banner-overlay{
+    opacity: 0;
+}
+.video-player:hover .play-button{
+    transform: scale(1.5) translate(-50%, -50%);
+}
+.banner-overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000000aa;
+    transition: opacity .2s ease-in-out;
+}
+.play-button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: transform .2s ease-in-out;
+}
+
+
+@media (min-width: 1024px) {
+    h2{
+        font-size: 40px;
+    }
+}

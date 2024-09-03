@@ -19,3 +19,5 @@ body {
     flex-direction: column;
     align-items: flex-end;
  }
+
+ button{border: none;}

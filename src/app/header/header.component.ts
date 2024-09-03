@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-showMenu = true;
+showMenu = false;
 toggleMenu(){
   this.showMenu =!this.showMenu;
 }
