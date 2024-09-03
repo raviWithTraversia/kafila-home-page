@@ -1,0 +1,50 @@
+.header{
+    background-image: linear-gradient(to right, #084886 0%, #04192E 100%);
+    padding: 10px 20px;
+    height: fit-content;
+}
+
+.logo{
+    height: 60px;
+    width: fit-content;
+    filter: brightness(0) invert(1);
+}
+.menu-button{
+    /* font-size: 14px; */
+    font-weight: 500;
+    width: fit-content;
+    border-radius: 8px;
+    padding: 8px 20px;
+    white-space: nowrap;
+    border: none;
+}
+.button-container{
+    width: fit-content;
+}
+button.main{
+    color: #084886;
+    /* width: 180px; */
+}
+button.secondary{
+    color: #fff;
+    /* width: 180px; */
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+.menu-btn{
+    background: transparent;
+    border: none;
+}
+.menu-icon{
+    height: 24px;
+    width: fit-content;
+}
+nav{
+    color: #fff;
+    /* font-size: 14px; */
+    list-style: none;
+}
+
+nav>li{
+    cursor: pointer;
+}
