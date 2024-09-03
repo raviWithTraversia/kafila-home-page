@@ -6,6 +6,7 @@
     height: 100%;
     font-weight: 500;
     color: #343434;
+    animation: slide-in .35s ease-in-out forwards;
 }
 
 .close-btn{
@@ -70,4 +71,13 @@ button.secondary{
 .menu-btn{
     background: transparent;
     border: none;
+}
+
+@keyframes slide-in{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
 }

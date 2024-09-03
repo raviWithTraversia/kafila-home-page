@@ -40,13 +40,17 @@ export class BannerGroupComponent {
     },
   ];
   animate= false;
-  selectedBanner = this.banners[0];
-
-  selectBanner(banner: Banner){
+  selectedBannerIdx = 0;
+ngOnInit(){
+  setInterval(()=>{
+    this.selectedBannerIdx = this.selectedBannerIdx +1 >= this.banners.length ? 0 : this.selectedBannerIdx + 1;
+  }, 5_000)
+}
+  selectBanner(idx: number){
     this.animate = true;
     setTimeout(()=>{
       this.animate = false;
     }, 300)
-    this.selectedBanner = banner;
+    this.selectedBannerIdx = idx;
   }
 }

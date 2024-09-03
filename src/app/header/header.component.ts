@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 showMenu = false;
-showAuthModal = true;
+showAuthModal = false;
 toggleMenu(){
   this.showMenu =!this.showMenu;
 }

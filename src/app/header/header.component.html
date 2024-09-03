@@ -5,7 +5,7 @@
     <button class="menu-btn" (click)="toggleMenu()">
         <img [src]="showMenu ? '../../assets/icons/close.png' : '../../assets/icons/menu.png'" alt="menu" class="menu-icon">
     </button>
-    <app-nav-menu *ngIf="showMenu" (toggleMenu)="toggleMenu()"></app-nav-menu>
+    <app-nav-menu *ngIf="showMenu" (toggleMenu)="toggleMenu()" (toggleAuthModal)="toggleAuthModal()"></app-nav-menu>
 </div>
    <div class="w-100 align-items-center d-none d-lg-flex">
     <nav class="d-flex gap-5 w-100 justify-content-center">

@@ -1,14 +1,14 @@
 <section class="banner-group">
     <div class="content d-flex flex-column gap-5">
        <div class="pills-container d-flex">
-        <button *ngFor="let banner of banners" [class]="'pill ' + (selectedBanner._id === banner._id ? 'selected' : '')" (click)="selectBanner(banner)">
+        <button *ngFor="let banner of banners; index as idx" [class]="'pill ' + (selectedBannerIdx === idx ? 'selected' : '')" (click)="selectBanner(idx)">
         </button>
        </div>
        <div [class]="(animate ? 'animate ' : '') + 'banner-details'">
           <div>
             <h1>Kafila For Business</h1>
-            <h2>{{selectedBanner.title}}</h2>
-            <p class="subtitle">{{selectedBanner.subtitle}}</p>
+            <h2>{{banners[selectedBannerIdx].title}}</h2>
+            <p class="subtitle">{{banners[selectedBannerIdx].subtitle}}</p>
             <button class="main-btn">GET STARTED</button>
           </div>
           <div class="video-player d-none d-lg-block">
