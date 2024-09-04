@@ -6,7 +6,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    transition: opacity 0.3s ease;
+    /* transition: opacity 0.3s ease; */
 }
 
 .content{
@@ -68,9 +68,9 @@ h2{
 }
 
 .banner-details{
-transition: opacity 0.3s ease;
-display: flex;
-justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    transition: opacity 0.3s ease;
 }
 .animate{
     opacity: 0.2;

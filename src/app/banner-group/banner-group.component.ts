@@ -18,7 +18,7 @@ export class BannerGroupComponent {
       title: 'Inbuilt Expense Management Tool',
       subtitle:
         'Single platform for filing expenses and ensuring easy reconciliation',
-      image: 'home-page-banner.webp',
+      image: 'home-page-banner.jpg',
     },
     {
       _id: 2,
