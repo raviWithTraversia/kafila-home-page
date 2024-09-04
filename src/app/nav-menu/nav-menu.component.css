@@ -72,6 +72,10 @@ button.secondary{
     background: transparent;
     border: none;
 }
+a{
+    text-decoration: none;
+    color: #343434;
+}
 
 @keyframes slide-in{
     from{

@@ -4,24 +4,24 @@
             <img src="../../assets/icons/close-gray.png" alt="">
         </button>
         <nav>
-            <li class="list-item">
+            <a href="#why-kafila" class="list-item" (click)="toggleMenuEvent()">
                 <span>WHY KAFILA?</span>
                 <div class="arrow">
                     <img src="../../assets//icons/arrow-right.png" alt="visit">
                 </div>
-            </li>
-            <li class="list-item">
+            </a>
+            <a href="#expense-management" class="list-item" (click)="toggleMenuEvent()">
                 <span>EXPENSE MANAGEMENT</span>
                 <div class="arrow">
                     <img src="../../assets//icons/arrow-right.png" alt="visit">
                 </div>
-            </li>
-            <li class="list-item">
-                <span>CASE STUDIES</span>
+            </a>
+            <a href="#footer" class="list-item" (click)="toggleMenuEvent()">
+                <span>Contact Us</span>
                 <div class="arrow">
                     <img src="../../assets//icons/arrow-right.png" alt="visit">
                 </div>
-            </li>
+            </a>
         </nav>
         <div class="d-flex flex-column gap-3 button-container w-100 mt-auto">
             <button class="menu-button main" (click)="toggleAuthModalEvent()">SIGN IN/SIGN UP</button>
