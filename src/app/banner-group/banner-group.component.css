@@ -1,6 +1,6 @@
 .banner-group{
     background-image: url("../../assets/home-page-banner.webp");
-    min-height: 90vh;
+    min-height: 95vh;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -16,7 +16,7 @@
 .pills-container{
     margin-left: auto;
     position: absolute;
-    bottom: 30px;
+    bottom: 40px;
     right: 10px;
 }
 .pill{
@@ -60,9 +60,9 @@ h2{
     margin-top: 20px;
     background-image: linear-gradient(to right, #063461 0%, var(--brand-color) 100%);
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
-    padding: 16px 36px;
+    padding: 8px 24px;
     border-radius: 5px;
 }
 

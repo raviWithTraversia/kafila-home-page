@@ -7,7 +7,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    align-items: start;
+    align-items: flex-start;
 }
 .stats{
     display: flex;
@@ -80,6 +80,142 @@ color: gray;
     width: 100%;
 }
 
+.consumer-link{
+    color: var(--brand-color);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+section.usage{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+section.usage *{
+    margin: 0;
+}
+.heading{
+    width: fit-content;
+    font-size :32px;
+    font-weight: 700;
+    color: rgb(160, 160, 160);
+    position: relative;
+}
+.heading::before{
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 8px;
+    width: 10%;
+    min-width: 50px;
+    background-color: var(--brand-color);
+    border-radius: 99999px;
+}
+
+section.usage img{
+    height: 30px;
+    width: fit-content;
+}
+.usage-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.usage-card{
+    width: 90%;
+    max-width: 400px;
+}
+.usage-card .icon-container{
+    background: var(--brand-color);
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+.usage-card .icon-container>img{
+    height: 30px;
+    width: 30px;
+    filter: brightness(0) invert(1);
+}
+.usage-card h3{
+    color: var(--brand-color);
+    font-weight: 600;
+}
+
+.user-flow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.user-flow .step-count{
+    width: fit-content;
+    color: white;
+    height: 75px;
+    width: 75px;
+    border-radius: 99999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, var(--brand-color) 0%, #04192E 100%);
+    font-weight: 700;
+    font-size: 32px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.user-flow .step{
+    position: relative;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 10px;
+    /* overflow: hidden; */
+    margin-top: 40px;
+    box-shadow: 1px 1px 5px #7682c223;
+    /* padding-top: 0px; */
+}
+.step h3{
+    font-size: 20px;
+}
+.step p{
+    color: gray;
+}
+.register, .distributor, .earn{
+    height: 180px;
+    width: 100%;
+    background-image: url('../assets/register.png') ;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+.distributor{
+    background-image: url('../assets/add-distributor.png') ;
+}
+.earn{
+    background-image: url('../assets/final-step.png') ;
+}
+.user-flow .info{
+    padding: 15px;
+}
+.steps-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 @media (min-width: 1024px) {
     .stats-group{
         flex-direction: row;
@@ -100,5 +236,22 @@ color: gray;
     .cards-group{
         flex-direction: row;
         width: 50%;
+    }
+    .usage-group{
+        flex-direction: row;
+    }
+    .usage-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .usage-card .icon-container{
+        height: 75px;
+        width: 75px;
+    }
+    .steps-container{
+        flex-direction: row;
+        gap: 25px;
     }
 }
