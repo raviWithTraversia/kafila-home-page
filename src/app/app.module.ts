@@ -10,6 +10,7 @@ import { BannerGroupComponent } from './banner-group/banner-group.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { AuthModalComponent } from './auth-modal/auth-modal.component';
 import { VideoModalComponent } from './video-modal/video-modal.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { VideoModalComponent } from './video-modal/video-modal.component';
     BannerGroupComponent,
     NavMenuComponent,
     AuthModalComponent,
-    VideoModalComponent
+    VideoModalComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

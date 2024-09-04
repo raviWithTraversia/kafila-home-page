@@ -1,4 +1,4 @@
-<section class="banner-group">
+<section class="banner-group" [style.backgroundImage]="'url(' + '../../assets/'+ banners[selectedBannerIdx].image + ')'">
     <div class="content d-flex flex-column gap-5">
        <div [class]="(animate ? 'animate ' : '') + 'banner-details'">
           <div>

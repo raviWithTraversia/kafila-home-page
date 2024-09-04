@@ -1,18 +1,17 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-showMenu = false;
-showAuthModal = false;
-toggleMenu(){
-  this.showMenu =!this.showMenu;
-}
-toggleAuthModal(){
-  this.showAuthModal = !this.showAuthModal;
-}
-
+  showMenu = false
+  showAuthModal = false
+  toggleMenu() {
+    this.showMenu = !this.showMenu
+  }
+  toggleAuthModal() {
+    this.showAuthModal = !this.showAuthModal
+  }
 }
