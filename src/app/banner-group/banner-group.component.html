@@ -1,6 +1,7 @@
-<section class="banner-group" [style.backgroundImage]="'url(' + '../../assets/'+ banners[selectedBannerIdx].image + ')'">
+<section [class]="(animate ? 'animate ' : '') + 'banner-group'" [style.backgroundImage]="'url(' + '../../assets/'+ banners[selectedBannerIdx].image + ')'">
     <div class="content d-flex flex-column gap-5">
-       <div [class]="(animate ? 'animate ' : '') + 'banner-details'">
+       <div class="banner-details">
+       <!-- <div [class]="(animate ? 'animate ' : '') + 'banner-details'"> -->
           <div>
             <h1>Kafila For Business</h1>
             <h2>{{banners[selectedBannerIdx].title}}</h2>
