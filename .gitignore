@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 /bazel-out
+/src/assets/hero-video.mp4
 
 # Node
 /node_modules
