@@ -5,6 +5,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 
 .content{
@@ -12,23 +13,30 @@
     color: white;
 }
 
+.pills-container{
+    margin-left: auto;
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+}
 .pill{
-    height: 10px;
-    width: 30px;
+    height: 8px;
+    width: 20px;
     border-radius: 999999px;
     margin-right: 10px;
-    background-color: #343b53;
+    /* background-color: #343b53; */
+    background-color: #ffffff69;
     transition: width .35s ease-in-out;
 }
 
 .pill.selected{
-    width: 50px;
-    background-image: linear-gradient(to right, #084886 0%, #063461 100%);
+    width: 40px;
+    background-image: linear-gradient(to right, #2368ac 0%, var(--brand-color) 100%);
     /* animation: scale .5s ease-in-out forwards; */
 }
 
 h1{
-    color: #084886;
+    color: var(--brand-color);
     font-weight: 600;
     font-size: 24px;
 }
@@ -42,14 +50,15 @@ h2{
 }
 
 .subtitle{
-    width: 50%;
+    width: 80%;
+    min-height: 200px;
     max-width: 600px;
     font-size: 24px;
 }
 
 .main-btn{
     margin-top: 20px;
-    background-image: linear-gradient(to right, #063461 0%, #084886 100%);
+    background-image: linear-gradient(to right, #063461 0%, var(--brand-color) 100%);
     color: white;
     font-size: 24px;
     font-weight: 600;

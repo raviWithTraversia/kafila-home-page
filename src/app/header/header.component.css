@@ -1,20 +1,20 @@
 .header{
-    background-image: linear-gradient(to right, #084886 0%, #04192E 100%);
-    padding: 10px 20px;
+    background-image: linear-gradient(to right, var(--brand-color) 0%, #04192E 100%);
+    padding: 8px 24px;
     height: fit-content;
+    font-size: 14px;
 }
 
 .logo{
-    height: 60px;
+    height: 40px;
     width: fit-content;
     filter: brightness(0) invert(1);
 }
 .menu-button{
-    /* font-size: 14px; */
     font-weight: 500;
     width: fit-content;
     border-radius: 8px;
-    padding: 8px 20px;
+    padding: 4px 12px;
     white-space: nowrap;
     border: none;
 }
@@ -22,7 +22,7 @@
     width: fit-content;
 }
 button.main{
-    color: #084886;
+    color: var(--brand-color);
     /* width: 180px; */
 }
 button.secondary{

@@ -40,7 +40,7 @@ export class BannerGroupComponent {
     },
   ];
   animate= false;
-  showVideo = true;
+  showVideo = false;
 
   selectedBannerIdx = 0;
 ngOnInit(){

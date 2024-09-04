@@ -1,9 +1,5 @@
 <section class="banner-group">
     <div class="content d-flex flex-column gap-5">
-       <div class="pills-container d-flex">
-        <button *ngFor="let banner of banners; index as idx" [class]="'pill ' + (selectedBannerIdx === idx ? 'selected' : '')" (click)="selectBanner(idx)">
-        </button>
-       </div>
        <div [class]="(animate ? 'animate ' : '') + 'banner-details'">
           <div>
             <h1>Kafila For Business</h1>
@@ -11,14 +7,18 @@
             <p class="subtitle">{{banners[selectedBannerIdx].subtitle}}</p>
             <button class="main-btn">GET STARTED</button>
           </div>
-          <div class="video-player d-none d-lg-block" (click)="toggleVideoModal()">
+          <!-- <div class="video-player d-none d-lg-block" (click)="toggleVideoModal()">
             <div class="banner-overlay"></div>
             <img class="video-banner" src="../../assets/video-banner.png" alt="">
             <button class="play-button">
                 <img src="../../assets/icons/play.png" alt="play">
             </button>
-          </div>
+          </div> -->
+       </div>
+       <div class="pills-container d-flex">
+        <button *ngFor="let banner of banners; index as idx" [class]="'pill ' + (selectedBannerIdx === idx ? 'selected' : '')" (click)="selectBanner(idx)">
+        </button>
        </div>
     </div>
 </section>
-<app-video-modal *ngIf="showVideo" (videoModalEvent)="toggleVideoModal()"></app-video-modal>
+<!-- <app-video-modal *ngIf="showVideo" (videoModalEvent)="toggleVideoModal()"></app-video-modal> -->

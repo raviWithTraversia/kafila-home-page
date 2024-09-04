@@ -60,13 +60,13 @@ nav{
     width: fit-content;
 }
 button.main{
-    background-color: #084886;
+    background-color: var(--brand-color);
     color: white;
 }
 button.secondary{
-    color: #084886;
+    color: var(--brand-color);
     background-color: transparent;
-    border: 2px solid #084886;
+    border: 2px solid var(--brand-color);
 }
 .menu-btn{
     background: transparent;
