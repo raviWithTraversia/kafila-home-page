@@ -198,7 +198,8 @@ section.usage img{
     width: 100%;
     background-image: url('../assets/register.png') ;
     background-position: center;
-    background-size: cover;
+    background-size: 70%;
+    background-repeat: no-repeat;
     border-radius: 10px;
 }
 .distributor{
