@@ -14,4 +14,7 @@ triggerCloseEvent(){
 toggleShowPassword(){
   this.showPassword =!this.showPassword;
 }
+preventClose(event:Event){
+  event.stopPropagation();
+}
 }

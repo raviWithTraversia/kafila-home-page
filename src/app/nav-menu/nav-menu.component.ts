@@ -17,4 +17,7 @@ export class NavMenuComponent {
     this.toggleAuthModal.emit();
     this.toggleMenu.emit();
   }
+  preventClose(event:Event){
+    event.stopPropagation();
+  }
 }

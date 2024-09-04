@@ -1,5 +1,5 @@
-<div class="overlay">
-    <section class="d-flex flex-column d-lg-none position-absolute p-4 menu">
+<div class="overlay"  (click)="toggleMenuEvent()">
+    <section class="d-flex flex-column d-lg-none position-absolute p-4 menu" (click)="preventClose($event)">
         <button class="close-btn" (click)="toggleMenuEvent()">
             <img src="../../assets/icons/close-gray.png" alt="">
         </button>

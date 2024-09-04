@@ -1,5 +1,5 @@
-<div class="overlay centered">
-    <div class="auth-modal">
+<div class="overlay centered" (click)="triggerCloseEvent()">
+    <div class="auth-modal" (click)="preventClose($event)">
         <div class="content d-lg-block">
             <button class="close-btn" (click)="triggerCloseEvent()">
                 <img src="../../assets/icons/close-accent.png" alt="close" />

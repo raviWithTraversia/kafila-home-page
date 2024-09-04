@@ -14,4 +14,5 @@ toggleMenu(){
 toggleAuthModal(){
   this.showAuthModal = !this.showAuthModal;
 }
+
 }

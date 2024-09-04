@@ -40,6 +40,8 @@ export class BannerGroupComponent {
     },
   ];
   animate= false;
+  showVideo = true;
+
   selectedBannerIdx = 0;
 ngOnInit(){
   setInterval(()=>{
@@ -52,5 +54,8 @@ ngOnInit(){
       this.animate = false;
     }, 300)
     this.selectedBannerIdx = idx;
+  }
+  toggleVideoModal(){
+    this.showVideo = !this.showVideo;
   }
 }

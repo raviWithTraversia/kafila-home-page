@@ -11,13 +11,14 @@
             <p class="subtitle">{{banners[selectedBannerIdx].subtitle}}</p>
             <button class="main-btn">GET STARTED</button>
           </div>
-          <div class="video-player d-none d-lg-block">
+          <div class="video-player d-none d-lg-block" (click)="toggleVideoModal()">
             <div class="banner-overlay"></div>
             <img class="video-banner" src="../../assets/video-banner.png" alt="">
-            <button class="">
-                <img class="play-button" src="../../assets/icons/play.png" alt="play">
+            <button class="play-button">
+                <img src="../../assets/icons/play.png" alt="play">
             </button>
           </div>
        </div>
     </div>
 </section>
+<app-video-modal *ngIf="showVideo" (videoModalEvent)="toggleVideoModal()"></app-video-modal>

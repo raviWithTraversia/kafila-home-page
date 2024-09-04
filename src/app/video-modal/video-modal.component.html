@@ -1,0 +1,8 @@
+<div class="overlay" (click)="triggerVideoEvent()">
+    <div class="d-flex align-items-start justify-content-between video-modal" (click)="preventClose($event)">
+        <video src="../../assets/hero-video.mp4" controls></video>
+        <button class="close-btn" (click)="triggerVideoEvent()">
+            <img src="../../assets/icons/close-accent.png" alt="">
+        </button>
+    </div>
+</div>
