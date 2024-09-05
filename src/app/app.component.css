@@ -2,6 +2,9 @@
     display: flex;
     justify-content: center;
 }
+.stats-container *{
+    margin: 0;
+}
 .stats-group{
     display: flex;
     flex-direction: column;
