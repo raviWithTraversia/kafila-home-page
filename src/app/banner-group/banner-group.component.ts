@@ -44,10 +44,15 @@ export class BannerGroupComponent {
   ]
   animate = false
   showVideo = false
-
   selectedBannerIdx = 0
+  changeBannerIntervalID: any
+
   ngOnInit() {
-    setInterval(() => {
+    this.changeBannerIntervalID = this.bannerChangeInterval()
+  }
+
+  bannerChangeInterval() {
+    return setInterval(() => {
       this.selectedBannerIdx =
         this.selectedBannerIdx + 1 >= this.banners.length
           ? 0
@@ -59,6 +64,8 @@ export class BannerGroupComponent {
     setTimeout(() => {
       this.animate = false
     }, 300)
+    clearInterval(this.changeBannerIntervalID)
+    this.changeBannerIntervalID = this.bannerChangeInterval()
     this.selectedBannerIdx = idx
   }
   toggleVideoModal() {

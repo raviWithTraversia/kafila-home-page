@@ -224,6 +224,51 @@ section.usage img{
     border-radius: 5px;
     background-image: linear-gradient(to right, var(--brand-color) 0%, #04192E 100%);
 }
+
+.customer-stories{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.story-group{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 30px;
+}
+.user-card{
+display: flex;
+flex-direction: column;
+gap: 10px;
+width: 100%;
+}
+.user-card>p{
+    color: gray;
+}
+.user-image{
+    height: 40px;
+    width: 40px;
+    background-color: #dbdbdb;
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-detail{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.user-detail p{
+    font-weight: 600;
+    margin: 0;
+}
+.user-image>img{
+height: 25px;
+width: fit-content;
+}
 @media (min-width: 1024px) {
     .stats-group{
         flex-direction: row;
@@ -261,5 +306,8 @@ section.usage img{
     .steps-container{
         flex-direction: row;
         gap: 25px;
+    }
+    .user-card{
+        max-width: 300px;
     }
 }
