@@ -3,7 +3,7 @@
 }
 footer{
     color: #00000077;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     background-color: #030e1a;
     display: flex;
     flex-direction: column;
