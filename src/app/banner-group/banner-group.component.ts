@@ -69,7 +69,6 @@ export class BannerGroupComponent {
         },
       })
   }
-
   bannerChangeInterval() {
     return setInterval(() => {
       if (this.selectedBannerIdx == null) return
