@@ -1,10 +1,12 @@
 import { Component } from '@angular/core'
-
+import { HttpClient } from '@angular/common/http'
+import { fixImagePath } from 'src/utils/get-image-path'
 interface Banner {
   _id: number
   title: string
-  subtitle: string
-  image: string
+  description: string
+  imagePath: string
+  newImagePath: string
 }
 @Component({
   selector: 'app-banner-group',
@@ -12,51 +14,68 @@ interface Banner {
   styleUrls: ['./banner-group.component.css'],
 })
 export class BannerGroupComponent {
-  banners = [
-    {
-      _id: 1,
-      title: 'Inbuilt Expense Management Tool',
-      subtitle:
-        'Single platform for filing expenses and ensuring easy reconciliation',
-      image: 'home-page-banner.jpg',
-    },
-    {
-      _id: 2,
-      title: 'Save on Company Travel Expenses',
-      subtitle:
-        'With special corporate rates on flights & hotels, save your travel budget by paying less for more features',
-      image: 'hero-1.jpg',
-    },
-    {
-      _id: 3,
-      title: 'Inbuilt Expense Management Tool',
-      subtitle:
-        'Single platform for filing expenses and ensuring easy reconciliation',
-      image: 'hero-2.jpg',
-    },
-    {
-      _id: 4,
-      title: 'Save on Company Travel Expenses',
-      subtitle:
-        'With special corporate rates on flights & hotels, save your travel budget by paying less for more features',
-      image: 'hero-3.jpg',
-    },
-  ]
+  // banners = [
+  //   {
+  //     _id: 1,
+  //     title: 'Inbuilt Expense Management Tool',
+  //     description:
+  //       'Single platform for filing expenses and ensuring easy reconciliation',
+  //     image: 'home-page-banner.jpg',
+  //   },
+  //   {
+  //     _id: 2,
+  //     title: 'Save on Company Travel Expenses',
+  //     description:
+  //       'With special corporate rates on flights & hotels, save your travel budget by paying less for more features',
+  //     image: 'hero-1.jpg',
+  //   },
+  //   {
+  //     _id: 3,
+  //     title: 'Inbuilt Expense Management Tool',
+  //     description:
+  //       'Single platform for filing expenses and ensuring easy reconciliation',
+  //     image: 'hero-2.jpg',
+  //   },
+  //   {
+  //     _id: 4,
+  //     title: 'Save on Company Travel Expenses',
+  //     description:
+  //       'With special corporate rates on flights & hotels, save your travel budget by paying less for more features',
+  //     image: 'hero-3.jpg',
+  //   },
+  // ]
+  banners: Banner[] = []
   animate = false
   showVideo = false
-  selectedBannerIdx = 0
+  selectedBannerIdx: null | number = null
   changeBannerIntervalID: any
 
+  constructor(private http: HttpClient) {}
   ngOnInit() {
     this.changeBannerIntervalID = this.bannerChangeInterval()
+    this.http
+      .get<any>(
+        'https://kafila.traversia.net/api/manageUpload/getUploadImage?id=6555f84c991eaa63cb171a9f',
+      )
+      .subscribe({
+        next: (data) => {
+          console.log({ data })
+          const bannersList = data?.Result?.map(fixImagePath)
+          console.log({ bannersList })
+          this.banners = bannersList
+          this.selectedBannerIdx = 0
+        },
+      })
   }
 
   bannerChangeInterval() {
     return setInterval(() => {
+      if (this.selectedBannerIdx == null) return
       this.selectedBannerIdx =
         this.selectedBannerIdx + 1 >= this.banners.length
           ? 0
           : this.selectedBannerIdx + 1
+      console.log({ banner: this.banners[this.selectedBannerIdx] })
     }, 10_000)
   }
   selectBanner(idx: number) {
@@ -67,6 +86,7 @@ export class BannerGroupComponent {
     clearInterval(this.changeBannerIntervalID)
     this.changeBannerIntervalID = this.bannerChangeInterval()
     this.selectedBannerIdx = idx
+    console.log({ banner: this.banners[this.selectedBannerIdx] })
   }
   toggleVideoModal() {
     this.showVideo = !this.showVideo

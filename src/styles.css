@@ -26,3 +26,9 @@ body {
  }
 
  button{border: none;}
+
+ @keyframes load{
+   to{
+      transform: rotate(360deg);
+   }
+ }

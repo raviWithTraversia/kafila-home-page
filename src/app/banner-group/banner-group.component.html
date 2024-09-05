@@ -1,4 +1,9 @@
-<section class="banner-group" [style.backgroundImage]="'url(' + '../../assets/'+ banners[selectedBannerIdx].image + ')'">
+<div class="loader" *ngIf="selectedBannerIdx == null">
+<img src="../../assets/icons/loading.png" alt="loader">
+</div>
+<!-- [style.backgroundImage]="'url(' + banners[selectedBannerIdx].newImagePath + ')'" -->
+<section *ngIf="selectedBannerIdx != null" class="banner-group" >
+  <img class="banner" [src]=" banners[selectedBannerIdx].newImagePath" alt="">
   <!-- linear-gradient(to right, #00000077 0%, #00000077 100%), -->
     <div class="content d-flex flex-column gap-5">
        <!-- <div class="banner-details"> -->
@@ -6,7 +11,7 @@
           <div>
             <h1>Kafila For Business</h1>
             <h2>{{banners[selectedBannerIdx].title}}</h2>
-            <p class="subtitle">{{banners[selectedBannerIdx].subtitle}}</p>
+            <p class="subtitle">{{banners[selectedBannerIdx].description}}</p>
             <button class="main-btn">GET STARTED</button>
           </div>
           <!-- <div class="video-player d-none d-lg-block" (click)="toggleVideoModal()">
