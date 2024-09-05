@@ -1,6 +1,7 @@
 import { Component } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
 import { fixImagePath } from 'src/utils/get-image-path'
+import { map } from 'rxjs'
 interface Banner {
   _id: number
   title: string
@@ -57,11 +58,12 @@ export class BannerGroupComponent {
       .get<any>(
         'https://kafila.traversia.net/api/manageUpload/getUploadImage?id=6555f84c991eaa63cb171a9f',
       )
+      .pipe(map((response) => response.Result))
       .subscribe({
-        next: (data) => {
-          console.log({ data })
-          const bannersList = data?.Result?.map(fixImagePath)
-          console.log({ bannersList })
+        next: (originalBannerList) => {
+          const bannersList = originalBannerList
+            ?.filter((banner: any) => banner?.type === 'login')
+            ?.map(fixImagePath)
           this.banners = bannersList
           this.selectedBannerIdx = 0
         },
