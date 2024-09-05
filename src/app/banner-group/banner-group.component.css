@@ -37,6 +37,8 @@
 .pills-container{
     margin-left: auto;
     position: absolute;
+    max-width: 50vw;
+    overflow: hidden;
     bottom: 40px;
     right: 10px;
 }
