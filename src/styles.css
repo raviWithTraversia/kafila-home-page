@@ -27,6 +27,10 @@ body {
 
  button{border: none;}
 
+
+ .spin{
+   animation: load .25s ease-in-out linear infinite
+ }
  @keyframes load{
    to{
       transform: rotate(360deg);

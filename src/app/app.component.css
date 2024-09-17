@@ -68,7 +68,6 @@ color: gray;
     flex-direction: column;
     gap: 10px;
     width: 100%;
-    /* outline: 2px solid red; */
 }
 
 .separator{
@@ -312,6 +311,7 @@ button.secondary{
     }
     .consumer-section{
         flex-direction: row;
+        align-items: center;
     }
     .separator{
         height: 100px;

@@ -1,0 +1,37 @@
+<form class="form" (submit)="handleSentOTP($event)">
+   <div class="inputs-container">
+    <label for="phone" [class]="'radio-input ' + (method == 'Phone' ? 'selected' : '')">
+        <span>Mobile</span>
+        <input (ngModelChange)="handleMethodChange($event)" [(ngModel)]="method" type="radio" name="method" id="phone" value="Phone">
+       </label>
+       <label for="email" [class]="'radio-input ' + (method == 'Email' ? 'selected' : '')">
+        <span>Email</span>
+        <input (ngModelChange)="handleMethodChange($event)" [(ngModel)]="method" type="radio" name="method" id="email" value="Email">
+       </label>
+   </div>
+   <button class="method-submit mt-4">
+    <span>{{otpSent ? 'RESEND OTP' :'SEND OTP'}}</span>
+</button>
+
+</form>
+<p *ngIf="otpSent" class="otp-sent-msg">OTP Sent To {{method}}</p>
+<form *ngIf="otpSent" class="form" [formGroup]="otpFormData" (submit)="handleOTPSubmit($event)">
+    <p class="otp-message">Enter 6 Digit OTP</p>
+  <div>
+    <div class="input-control">
+        <div class="input-icon">
+            <img src="../../assets/icons/otp.png" alt="">
+        </div>
+    <input maxlength="6" type="text" id="otp" formControlName="otp">
+    </div>
+    <p *ngIf="otpFormData.controls['otp'].errors?.['required'] && isTriggered" class="error-msg">
+        OTP Required
+      </p>
+    <p *ngIf="(otpFormData.controls['otp'].errors?.['minlength'] || otpFormData.controls['otp'].errors?.['maxlength']) && isTriggered" class="error-msg">
+        OTP Must Be Of 6 Digits
+      </p>
+  </div>
+    <button class="main-btn mt-4">
+        <span>VERIFY OTP</span>
+    </button>
+</form>

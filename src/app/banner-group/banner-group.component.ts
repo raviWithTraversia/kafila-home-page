@@ -76,7 +76,6 @@ export class BannerGroupComponent {
         this.selectedBannerIdx + 1 >= this.banners.length
           ? 0
           : this.selectedBannerIdx + 1
-      console.log({ banner: this.banners[this.selectedBannerIdx] })
     }, 10_000)
   }
   selectBanner(idx: number) {
@@ -87,7 +86,6 @@ export class BannerGroupComponent {
     clearInterval(this.changeBannerIntervalID)
     this.changeBannerIntervalID = this.bannerChangeInterval()
     this.selectedBannerIdx = idx
-    console.log({ banner: this.banners[this.selectedBannerIdx] })
   }
   toggleVideoModal() {
     this.showVideo = !this.showVideo

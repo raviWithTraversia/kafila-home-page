@@ -12,6 +12,8 @@ import { AuthModalComponent } from './auth-modal/auth-modal.component'
 import { VideoModalComponent } from './video-modal/video-modal.component'
 import { FooterComponent } from './footer/footer.component'
 import { HttpClientModule } from '@angular/common/http'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { OtpFormComponent } from './otp-form/otp-form.component'
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http'
     AuthModalComponent,
     VideoModalComponent,
     FooterComponent,
+    OtpFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,8 @@ import { HttpClientModule } from '@angular/common/http'
     BrowserAnimationsModule,
     MatButtonModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

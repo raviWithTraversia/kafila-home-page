@@ -16,6 +16,19 @@
     width: 30px;
     transition: transform .2s ease-in-out;
 }
+
+#otp{
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.error-msg{
+    color: gray;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding-left: 5px;
+    margin-top: 5px;
+}
 .overlay.centered{
     display: flex;
     align-items: center ;
@@ -34,6 +47,11 @@
     border: 1px solid #084784;
     padding-block: 20px;
     position: relative;
+}
+.otp-message{
+    /* font-weight: 600; */
+    color: gray;
+    font-size: 24px;
 }
 .auth-modal .content{
     margin-left: auto;

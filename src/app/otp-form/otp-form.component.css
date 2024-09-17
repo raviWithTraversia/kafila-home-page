@@ -1,0 +1,133 @@
+#otp{
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.method-form{
+    display: flex;
+    flex-direction: column;
+}
+.method-submit{
+    width:fit-content;
+    border-radius: 5px;
+    background-color: #084784;
+    border-radius: 15px;
+    color: #fff;
+    padding: 12px 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.radio-input{
+    display: flex;
+}
+.otp-message{
+    /* font-weight: 600; */
+    color: gray;
+    font-size: 24px;
+}
+
+.otp-sent-msg{
+    color: #129412;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.inputs-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+}
+.radio-input{
+    padding: 5px 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+.radio-input.selected{
+    outline: 2px solid var(--brand-color);
+    color: var(--brand-color);
+    font-weight: 600;
+}
+input[type="radio"]{
+    accent-color: var(--brand-color);
+    height: 20px;
+    width: 20px;
+}
+.form{
+    padding: 0 30px;
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-btn{
+    width: 100%;
+    border-radius: 5px;
+    background-color: #084784;
+    border-radius: 15px;
+    color: #fff;
+    padding: 12px 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.input-control{
+    width: 100%;
+    display: flex;
+    border-radius: 15px;
+    position: relative;
+    background-color: #f7f7f7;
+}
+.input-control:focus-within{
+    outline: 1px solid #084784;
+    border-radius: 15px;
+}
+.input-icon{
+    justify-self: stretch;
+    width: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px 0 0 15px;
+}
+input{
+    /* border: 1px solid rgb(205, 205, 205); */
+    border: none;
+    width: 100%;
+    border-radius: 0 15px 15px 0;
+    color: #6e6e6e;
+    padding: 12px 10px;
+    background-color: transparent;
+    /* background-color: #e8f0fe; */
+}
+input:focus{
+    outline: none;
+}
+.input-control img{
+    height: 20px;
+    width: 20px;
+}
+
+.register-link{
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #484848;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.register-link span{
+color: #084784;
+}
